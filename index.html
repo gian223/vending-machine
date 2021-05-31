@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vending Machine</title>
+    <link href="#" rel="icon"/>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/vendingMachine.js"></script>
+    <script src="js/controller.js"></script>
+    <script src="js/coin.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/View.js"></script>
+</head>
+<body>
+
+<div class="box">
+    <div class="box__message"></div>
+    <div class="box__keypad">
+        <button class="box__keypad-btn btn-a" value="A">A</button>
+        <button class="box__keypad-btn btn-b" value="B">B</button>
+        <button class="box__keypad-btn btn-c" value="C">C</button>
+        <button class="box__keypad-btn btn-1" value="1">1</button>
+        <button class="box__keypad-btn btn-2" value="2">2</button>
+        <button class="box__keypad-btn btn-3" value="3">3</button>
+        <button class="box__keypad-btn btn-4" value="4">4</button>
+        <button class="box__keypad-btn btn-5" value="5">5</button>
+        <button class="box__keypad-btn btn-6" value="6">6</button>
+        <button class="box__keypad-btn btn-7" value="7">7</button>
+        <button class="box__keypad-btn btn-8" value="8">8</button>
+        <button class="box__keypad-btn btn-9" value="9">9</button>
+        <button class="box__keypad-btn btn-clr" value="clr">Clear</button>
+        <button class="box__keypad-btn btn-ok" value="ok">Ok</button>
+    </div>
+    <div class="box__screen"></div>
+    <div class="box__dispense">
+        <div class="box__dispense-change">Change</div>
+        <div class="box__dispense-change-box">
+            <img alt="" class="dispense-coin dispense-coin-200" src="images/2-dollar.png">
+            <img alt="" class="dispense-coin dispense-coin-100" src="images/1-dollar.png">
+            <img alt="" class="dispense-coin dispense-coin-50" src="images/50-cent.png">
+            <img alt="" class="dispense-coin dispense-coin-20" src="images/20-cent.png">
+            <img alt="" class="dispense-coin dispense-coin-10" src="images/10-cent.png">
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="container__product" id="product-a1">
+        <img alt="" class="product product-a1" src="images/product_a1.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-a2">
+        <img alt="" class="product product-a2" src="images/product_a2.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-a3">
+        <img alt="" class="product product-a3" src="images/product_a3.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-b1">
+        <img alt="" class="product product-b1" src="images/product_b1.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-b2">
+        <img alt="" class="product product-b2" src="images/product_b2.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-b3">
+        <img alt="" class="product product-b3" src="images/product_b3.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-c1">
+        <img alt="" class="product product-c1" src="images/product_c1.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-c2">
+        <img alt="" class="product product-c2" src="images/product_c2.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+    <div class="container__product" id="product-c3">
+        <img alt="" class="product product-c3" src="images/product_c3.png">
+        <div class="container__product-price">A1 | $3.50 | 5</div>
+    </div>
+</div>
+
+<div class="box2">
+    <div class="coin-box-vending">
+        <h2>Vending Machine Coin Holder</h2>
+        <table>
+            <tr>
+                <td><img alt="" src="images/2-dollar.png"></td>
+                <td><img alt="" src="images/1-dollar.png"></td>
+                <td><img alt="" src="images/50-cent.png"></td>
+                <td><img alt="" src="images/20-cent.png"></td>
+                <td><img alt="" src="images/10-cent.png"></td>
+            </tr>
+            <tr class="coin-holder" style="text-align: center"></tr>
+        </table>
+
+    </div>
+    <div class="coin-box-customer">
+
+        <h2>Customers Wallet (Unlimited Coins)</h2>
+        <img alt="" class="coin-box-customer-wallet" src="images/wallet.png">
+        <ul>
+            <li class="coin coin200" value="200"><img alt="" src="images/2-dollar.png"></li>
+            <li class="coin coin100" value="100"><img alt="" src="images/1-dollar.png"></li>
+            <li class="coin coin50" value="50"><img alt="" src="images/50-cent.png"></li>
+            <li class="coin coin20" value="20"><img alt="" src="images/20-cent.png"></li>
+            <li class="coin coin10" value="10"><img alt="" src="images/10-cent.png"></li>
+        </ul>
+    </div>
+    <div class="error-message"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

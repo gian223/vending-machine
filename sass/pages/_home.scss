@@ -1,0 +1,291 @@
+*{
+  font-family: "Arial";
+}
+.box{
+  display: inline-block;
+  width: 700px;
+  background-image: url("/images/vending_machine.png");
+  background-repeat: no-repeat;
+  height:  882px;
+  position: relative;
+  z-index: 200;
+
+  &__keypad{
+    width: 100px;
+    position: absolute;
+    top: 260px;
+    right: 135px;
+
+    &-btn{
+      width: 28px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__screen{
+    width: 92px;
+    height: 30px;
+    position: absolute;
+    top: 220px;
+    right: 143px;
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6px;
+  }
+
+  &__dispense{
+    width: 92px;
+    height: 60px;
+    position: absolute;
+    top: 580px;
+    right: 143px;
+    background-color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 6px;
+
+    &-change{
+      background-color: #303030;
+      color:white;
+      padding: 5px;
+      top: 0;
+      width: 82px;
+      position: absolute;
+      z-index: 900000000;
+    }
+    &-change-box{
+      background-color: white;
+      padding: 5px;
+      top: 0;
+      width: 82px;
+      position: absolute;
+      z-index: 10000 !important;
+      img{
+        width: 10px;
+      }
+    }
+    &-200{
+      position:relative;
+      animation: change200 2s;
+      z-index: 9999 !important;
+    }
+    &-100{
+      position:relative;
+      animation: change100 2s;
+      z-index: 9999 !important;
+    }
+    &-50{
+      position:relative;
+      animation: change50 2s;
+      z-index: 9999 !important;
+    }
+    &-20{
+      position:relative;
+      animation: change20 2s;
+      z-index: 9999 !important;
+    }
+    &-10{
+      position:relative;
+      animation: change10 2s;
+      z-index: 9999 !important;
+    }
+
+    @keyframes change200 {
+      0%       { transform: translatex(0px) translatey(0px) }
+      50%       { transform: translatex(0px) translatey(30px) }
+      100%      { transform: translatex(270px) translatey(-110px) scale(2); }
+    }
+    @keyframes change100 {
+      0%       { transform: translatex(0px) translatey(0px) }
+      50%       { transform: translatex(0px) translatey(30px) }
+      100%      { transform: translatex(255px) translatey(-110px) scale(2); }
+    }
+    @keyframes change50 {
+      0%       { transform: translatex(0px) translatey(0px) }
+      50%       { transform: translatex(0px) translatey(30px) }
+      100%      { transform: translatex(240px) translatey(-110px) scale(2); }
+    }
+    @keyframes change20 {
+      0%       { transform: translatex(0px) translatey(0px) }
+      50%       { transform: translatex(0px) translatey(30px) }
+      100%      { transform: translatex(225px) translatey(-110px) scale(2); }
+    }
+    @keyframes change10 {
+      0%       { transform: translatex(0px) translatey(0px) }
+      50%       { transform: translatex(0px) translatey(30px) }
+      100%      { transform: translatex(210px) translatey(-110px) scale(2); }
+    }
+  }
+
+  &__message{
+    font-size: 23px;
+    font-weight: bold;
+    position: absolute;
+    width: 430px;
+    height: 54px;
+    top: 110px;
+    left: 132px;
+    text-align: center;
+    padding-top: 22px;
+
+  }
+}
+
+.container{
+  width: 290px;
+  height: 625px;
+  //background-color: orange;
+  position: absolute;
+  top: 210px;
+  left: 145px;
+  z-index: 1;
+  padding: 10px;
+
+  &__product{
+    position: relative;
+    width: 92px;
+    height:100px;
+    background-color: white;
+    display: inline-block;
+    margin-bottom: 40px;
+    transition: ease all 5s;
+
+    img{
+      position: relative;
+      width: 100%;
+    }
+    &-price{
+      background-color: #303030;
+      color:white;
+      position: absolute;
+      font-size: 12px;
+      left: 5px;
+      padding: 5px;
+      bottom: -20px;
+    }
+  }
+}
+
+.btn-clr{
+  background-color: orangered;
+  width: 44px;
+}
+.btn-ok{
+  background-color: green;
+  width: 44px;
+}
+
+.product-a-dispense{
+  transition: 2s;
+  transform: translateY(510px);
+}
+.product-b-dispense{
+  transition: 2s;
+  transform: translateY(370px);
+}
+.product-c-dispense{
+  transition: 2s;
+  transform: translateY(230px);
+}
+
+.box2{
+  vertical-align: top;
+  margin-top: 95px;
+  height: 770px;
+  border: 1px solid black;
+  display: inline-block;
+  border-radius: 10px;
+}
+.coin-box-vending{
+  background-color: white;
+  padding: 10px;
+  text-align: center !important;
+  border: 3px solid #303030;
+  border-radius: 10px;
+
+  img{
+    width: 50px;
+  }
+  table{
+    margin: 0 auto
+  }
+}
+
+.coin-box-customer{
+  padding: 10px;
+  margin-top: 80px;
+  background-color: white;
+  border: 3px solid #303030;
+  border-radius: 10px;
+
+  &-wallet{
+    width: 100px !important;
+    display: inline-block;
+    background-color: white !important;
+    position: absolute;
+    z-index: 10001 !important;
+  }
+  img{
+    width: 50px;
+  }
+
+  ul{
+    margin-left: 70px;
+    margin-top: 30px;
+    display: inline-block !important;
+    list-style: none;
+  }
+  li{
+    display: inline-block;
+  }
+}
+
+.move-coin10{
+  position:relative;
+  animation: diagonal10 1s;
+  z-index: 9999 !important;
+}
+.move-coin20{
+  position:relative;
+  animation: diagonal20 1s;
+  z-index: 9999 !important;
+}
+.move-coin50{
+  position:relative;
+  animation: diagonal50 1s;
+  z-index: 9999 !important;
+}
+.move-coin100{
+  position:relative;
+  animation: diagonal100 1s;
+  z-index: 9999 !important;
+}
+.move-coin200{
+  position:relative;
+  animation: diagonal200 1s;
+  z-index: 9999 !important;
+}
+
+
+
+@keyframes diagonal10 {
+  0%       { transform: translatex(0px) translatey(0px) }
+  100%      { transform: translatex(-560px) translatey(-50px) scale(0.5); }
+}
+@keyframes diagonal20 {
+  0%       { transform: translatex(0px) translatey(0px) }
+  100%      { transform: translatex(-507px) translatey(-50px) scale(0.5); }
+}
+@keyframes diagonal50 {
+  0%       { transform: translatex(0px) translatey(0px) }
+  100%      { transform: translatex(-452px) translatey(-50px) scale(0.5); }
+}
+@keyframes diagonal100 {
+  0%       { transform: translatex(0px) translatey(0px) }
+  100%      { transform: translatex(-398px) translatey(-50px) scale(0.5); }
+}
+@keyframes diagonal200 {
+  0%       { transform: translatex(0px) translatey(0px) }
+  100%      { transform: translatex(-343px) translatey(-50px) scale(0.5); }
+}
